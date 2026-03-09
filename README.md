@@ -1,4 +1,5 @@
 # STM32 Weather Station (BME280 + OLED)
+![9689a23d-ae63-45de-90bc-d3936fc06f5d](https://github.com/user-attachments/assets/5f284472-4b60-4562-9f0b-29b90ba58c86)
 
 A compact weather station based on the **STM32L476RG** microcontroller. The device reads temperature, humidity, and pressure from the BME280 environmental sensor and displays the formatted data in real-time on an OLED screen.
 
