@@ -4,7 +4,7 @@ Kompaktowa stacja pogodowa oparta na mikrokontrolerze **STM32L476RG**. Urządzen
 
 ## Funkcjonalność
 * Odczyt danych środowiskowych z czujnika Bosch BME280.
-* Wyświetlanie wyników na wyświetlaczu OLED (sterownik SSD1306/SH1106).
+* Wyświetlanie wyników na wyświetlaczu OLED (sterownik SSD1306).
 * Komunikacja z obydwoma modułami po magistrali I2C.
 * **Współdzielona linia I2C:** Zarówno ekran, jak i czujnik są podłączone do tych samych pinów mikrokontrolera (I2C1), wykorzystując różne adresy sprzętowe.
 
