@@ -1,25 +1,25 @@
 # STM32 Weather Station (BME280 + OLED)
 
-Kompaktowa stacja pogodowa oparta na mikrokontrolerze **STM32L476RG**. Urządzenie odczytuje temperaturę, wilgotność oraz ciśnienie z czujnika środowiskowego BME280 i na bieżąco wyświetla sformatowane dane na ekranie OLED.
+A compact weather station based on the **STM32L476RG** microcontroller. The device reads temperature, humidity, and pressure from the BME280 environmental sensor and displays the formatted data in real-time on an OLED screen.
 
-## Funkcjonalność
-* Odczyt danych środowiskowych z czujnika Bosch BME280.
-* Wyświetlanie wyników na wyświetlaczu OLED (sterownik SSD1306).
-* Komunikacja z obydwoma modułami po magistrali I2C.
-* **Współdzielona linia I2C:** Zarówno ekran, jak i czujnik są podłączone do tych samych pinów mikrokontrolera (I2C1), wykorzystując różne adresy sprzętowe.
+## Features
+* Reading environmental data from the Bosch BME280 sensor.
+* Displaying results on an OLED display (SSD1306 driver).
+* Communication with both modules via the I2C bus.
+* **Shared I2C bus:** Both the screen and the sensor are connected to the same microcontroller pins (I2C1), using different hardware addresses.
 
-## Podłączenie sprzętu (Hardware)
+## Hardware Setup (Pinout)
 
-| Moduł | Pin STM32 | Funkcja | Uwagi |
+| Module | STM32 Pin | Function | Notes |
 | :--- | :--- | :--- | :--- |
-| **I2C (Wspólne)** | **PB8** | SCL | Sygnał zegarowy (podłączone do BME280 i OLED) |
-| | **PB9** | SDA | Linia danych (podłączone do BME280 i OLED) |
-| **Zasilanie** | 3.3V | VCC / VIN | Zasilanie obu modułów |
-| | GND | GND | Wspólna masa |
+| **I2C (Shared)** | **PB8** | SCL | Clock signal (connected to BME280 and OLED) |
+| | **PB9** | SDA | Data line (connected to BME280 and OLED) |
+| **Power** | 3.3V | VCC / VIN | Power supply for both modules |
+| | GND | GND | Common ground |
 
-## Wykorzystane biblioteki (Credits)
-W projekcie wykorzystano świetne biblioteki open-source. Pełne prawa autorskie należą do ich twórców:
-* **Biblioteka BME280 dla STM32:** [https://github.com/controllerstech/STM32-HAL/tree/master/BME280/I2C]
-* **Biblioteka OLED SSD1306 dla STM32:**[https://github.com/afiskon/stm32-ssd1306]
+## Credits
+This project uses excellent open-source libraries. Full copyright belongs to their respective creators:
+* **BME280 library for STM32:** [Controllerstech BME280 Library](https://github.com/controllerstech/STM32-HAL/tree/master/BME280/I2C)
+* **SSD1306 OLED library for STM32:** [Afiskon SSD1306 Library](https://github.com/afiskon/stm32-ssd1306)
 
-*Wielkie podziękowania dla autorów za udostępnienie kodu!*
+*Huge thanks to the authors for sharing their code!*
